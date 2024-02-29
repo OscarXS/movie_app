@@ -215,6 +215,6 @@
 
 @media screen and (max-width: 648px) {
     .thumbnail {
-        bottom: -60px!important;
+        bottom: -50px!important;
     }
 }

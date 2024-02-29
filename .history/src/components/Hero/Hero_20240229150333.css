@@ -212,9 +212,3 @@
         bottom: -30px!important;
     }
 }
-
-@media screen and (max-width: 648px) {
-    .thumbnail {
-        bottom: -60px!important;
-    }
-}
