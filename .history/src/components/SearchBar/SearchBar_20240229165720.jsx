@@ -21,7 +21,7 @@ const SearchBar = () => {
   },[])
 
   return (
-    <div className="bg-primary | flex justify-center items-start sm:px-16 p-8 sm:pt-10">
+    <div className="bg-primary | flex justify-center items-start sm:px-16 p-8">
       <div className="xl:max-w-[1280px] w-full">
         <div className={styles.container}>
           <div className={styles.search}>
@@ -48,7 +48,7 @@ const SearchBar = () => {
             </div>
           ) : (
             <div className="empty p-10">
-              <h2 className='text-lg text-gray-300'>No movies found</h2>
+              <h2 >No movies found</h2>
             </div>
           )}
         </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden -z-50">
+    <div className="w-full overflow-hidden -z-50" style={{ backgroundColor: 'rg' }}>
       <div className="flex justify-center items-center sm:px-16 px-8 py-4">
         <div className="xl:max-w-[1280px] w-full">
             <div className='header'>

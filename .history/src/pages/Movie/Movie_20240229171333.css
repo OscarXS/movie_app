@@ -30,13 +30,5 @@
 }
 
 @media screen and (max-width: 684px) {
-    .heroImage::after {
-        content: '';
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-image: linear-gradient( to top, rgb(0 4 15) 20%, transparent);
-    }
+    
 }

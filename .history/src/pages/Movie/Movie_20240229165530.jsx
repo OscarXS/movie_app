@@ -27,7 +27,7 @@ const Movie = () => {
       <div className="bg-primary w-full overflow-hidden">
         <div className="flex flex-col justify-center items-center sm:px-16 px-8 py-4 relative" style={{ height: '100vh' }}>
           <div className="heroImage | w-full h-[450px] overflow-hidden -mt-8">
-            <img className='object-cover object-top' src={singleMovie.backdrop_path === 'null' ? `https://image.tmdb.org/t/p/original/${singleMovie?.poster_path}` : `https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt="image" />
+            <img className='object-cover object-top' src={singleMovie.backdrop_path == 'null' ? `https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt="image" />
           </div>
 
           <div className="flex justify-center items-center sm:px-16 px-8 py-4 w-full z-10 mt-40">
