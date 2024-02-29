@@ -42,14 +42,19 @@ const UpcomingMovies = () => {
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               pagination={{type: 'progressbar'}}
+              navigation={true}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
+                  slidesPerView: 3,
+                  spaceBetween: 10,
                 },
                 1024: {
                   slidesPerView: 4,

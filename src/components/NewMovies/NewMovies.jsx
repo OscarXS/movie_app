@@ -36,21 +36,26 @@ const NewMovies = () => {
             <h2 className='text-white font-bold text-3xl'>New Movies</h2>
           </div>
           <div className="movies flex flex-wrap">
-            <Swiper
+          <Swiper
               spaceBetween={100}
               slidesPerView={5}
               modules={[Controller, Navigation, Pagination]}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               pagination={{type: 'progressbar'}}
+              navigation={true}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
+                  slidesPerView: 3,
+                  spaceBetween: 10,
                 },
                 1024: {
                   slidesPerView: 4,
