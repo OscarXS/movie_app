@@ -19,6 +19,7 @@ const Movie = () => {
   useEffect(() => {
     getMovie()
   },[])
+
   return (
     <div className="head | bg-primary w-full h-screen mt-[-100px] xl:max-w-[1280px]">
         <Navbar />
@@ -28,7 +29,7 @@ const Movie = () => {
               <img className='object-cover object-top' src={`https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt="image" />
             </div>
             <div className="herotext">
-              <p className='text-white mb-4'>design</p>
+              <p className='text-white mb-4'>Movies</p>
               <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{singleMovie?.title}</h2>
               <p className='text-white text-base mb-4'>{singleMovie?.overview}</p>
             </div>
@@ -45,18 +46,6 @@ const Movie = () => {
         </div>
       </div>
     </div>
-
-
-
-
-    // <div className="item | absolute inset-0 overflow-hidden duration-500">
-    //         <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt="image" />
-    //         <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
-    //             <p className='text-white mb-4'>design</p>
-    //             <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{singleMovie?.title}</h2>
-    //             <p className='text-white text-base mb-4'>{singleMovie?.overview}</p>
-    //         </div>
-    //     </div>
   )
 }
 
