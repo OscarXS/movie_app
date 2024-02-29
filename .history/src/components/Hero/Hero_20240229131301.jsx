@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="item | absolute inset-0 overflow-hidden duration-500 active">
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[6]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
-                <p className='text-white mb-4'>Top Movie</p>
+                <p className='text-white mb-4'>design</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[6]?.title}</h2>
                 <p className='text-white text-base mb-4'>{newMovies[6]?.overview}</p>
             </div>
@@ -50,7 +50,7 @@ const Hero = () => {
         <div className="item | absolute inset-0 overflow-hidden duration-500">
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[2]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
-                <p className='text-white mb-4'>Top Movie</p>
+                <p className='text-white mb-4'>design</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[2]?.title}</h2>
                 <p className='text-white text-base mb-4'>{newMovies[2]?.overview}</p>
             </div>
@@ -61,7 +61,7 @@ const Hero = () => {
         <div className="item | absolute inset-0 overflow-hidden duration-500">
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[3]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
-                <p className='text-white mb-4'>Top Movie</p>
+                <p className='text-white mb-4'>design</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[3]?.title}</h2>
                 <p className='text-white text-base mb-4'>{newMovies[3]?.overview}</p>
             </div>
@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="item | absolute inset-0 overflow-hidden duration-500">
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[4]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
-                <p className='text-white mb-4'>Top Movie</p>
+                <p className='text-white mb-4'>design</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[4]?.title}</h2>
                 <p className='text-white text-base mb-4'>{newMovies[4]?.overview}</p>
             </div>
