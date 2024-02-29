@@ -30,6 +30,7 @@ const SearchBar = () => {
                 placeholder='Search for movies' 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                className='w-[90%]'
               />
               <div 
                 className={styles.button} 
