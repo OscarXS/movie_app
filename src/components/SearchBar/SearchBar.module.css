@@ -42,3 +42,9 @@
     box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
   } */
   
+
+  @media screen and (max-width: 648px) {
+    .container {
+      margin-top: 50px;
+    }
+  }
