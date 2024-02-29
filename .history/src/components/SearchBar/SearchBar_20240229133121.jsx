@@ -22,7 +22,7 @@ const SearchBar = () => {
   },[])
 
   return (
-    <div className="bg-primary | flex justify-center items-start sm:px-16 px-8 mb-8">
+    <div className="bg-primary | flex justify-center items-start sm:px-16 px-6 mb-">
       <div className="xl:max-w-[1280px] w-full">
         <div className={styles.container}>
           <div className={styles.search}>
