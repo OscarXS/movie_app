@@ -39,17 +39,25 @@ const SearchBar = () => {
               </div>
           </div>
 
-          {movies?.length > 0 ? (
-            <div className="container">
-              {movies.map((movie, _) => (
-                <SingleMovie movie={movie} key={movie.index}/>
-              ))}
-            </div>
-          ) : (
-            <div className="empty p-10">
-              <h2 className='text-lg text-gray-300'>No movies found</h2>
-            </div>
-          )}
+          {
+            searchTerm === "" ? (
+              <div className="empty p-10">
+                  <h2 className='text-lg text-gray-300'></h2>
+                </div>
+            ) : (
+              movies?.length > 0 ? (
+                <div className="container">
+                  {movies.map((movie, _) => (
+                    <SingleMovie movie={movie} key={movie.index}/>
+                  ))}
+                </div>
+              ) : (
+                <div className="empty p-10">
+                  <h2 className='text-lg text-gray-300'>No movies found</h2>
+                </div>
+              )
+            )
+          }
         </div>
       </div>
     </div>

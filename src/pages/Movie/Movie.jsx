@@ -38,12 +38,12 @@ const Movie = () => {
                 <p className='text-base text-white mt-8'>{singleMovie?.overview}</p>
                 <p className='text-base text-gray-500 mt-8'>Releases: {singleMovie?.release_date}</p>
                 <p className='text-base text-orange-500 mt-18'>Rated: <span className='text-white'>{singleMovie?.vote_average}</span></p>
-                <p className='text-base text-orange-500 mt-8 underline'><Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><FaArrowLeft size={15} /> Back</Link></p>
+                <p className='text-base text-orange-500 mt-8 underline'><a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><FaArrowLeft size={15} /> Back</a></p>
               </div>
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </div>
   )
 }
