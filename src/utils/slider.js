@@ -55,12 +55,3 @@ export const slider = () => {
         })
     })
 }
-
-export const getCurrentMovies = () => {
-    const currentMovies = async () => {
-        fetch(`${import.meta.env.VITE_TMDB_URL}/movie/now_playing?language=en-US&page=1&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
-        .then(res => res.json())
-        .then(data => data.results)
-        .then(data => console.log('Current Movies :', data))
-      }
-}

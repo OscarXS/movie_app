@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { slider, getCurrentMovies } from '../../utils/slider'
+import { slider } from '../../utils/slider'
 import { useEffect } from 'react';
 import './Hero.css'
 import { Link } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
 
     const [newMovies, setNewMovies] = useState([]);
+    const [count, setCount] = useState(0)
 
     const getNewMovies = async () => {
         const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/now_playing?language=en-US&page=1&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
@@ -16,9 +17,15 @@ const Hero = () => {
     }
 
     useEffect(() => {
-        slider();
         getNewMovies()
+        slider();
     },[])
+
+    useEffect(() => {
+        setInterval(() => {
+        setCount((prevCount) => prevCount + 1);
+       }, 1000);
+       }, [count]);
   return (
     <div className="slider | bg-primary w-full h-screen mt-[-100px] relative">
     {/* List of Items */}
@@ -85,7 +92,7 @@ const Hero = () => {
         <button id="next"><FaArrowRight /></button>
     </div>
     {/* Thumbnail */}
-    <div className="thumbnail bottom-0 flex justify-center gap-3 w-full h-[300px] z-10 overflow-auto box-border">
+    <div className="thumbnail bottom-0 flex justify-center gap-3 w-full h-[250px] z-10 overflow-auto box-border">
         <Link to={`/movie/${newMovies[6]?.id}`}>
         <div className="item active">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[6]?.poster_path}`} alt="thumbnail" />
