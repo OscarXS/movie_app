@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaHome } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -8,9 +10,7 @@ const Navbar = () => {
             <div className='header'>
               <div className="text-orange-500 font-semibold text-2xl">Movies</div>
                 <ul className="menu">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
+                    <li className='p5 rounded-2xl text-white bg-black w-7 h-7 flex justify-center items-center'><Link to="/"><FaHome /></Link></li>
                 </ul>
             </div>
           </div>

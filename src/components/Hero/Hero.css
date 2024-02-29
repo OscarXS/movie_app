@@ -187,3 +187,32 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .arrows {
+        top: 20%;
+        left: 80%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .arrows {
+        top: 20%;
+        left: 80%;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .arrows {
+        top: 20%;
+        left: 70%;
+    }
+
+    .content {
+        left: 10%!important;
+    }
+
+    .thumbnail {
+        bottom: -30px!important;
+    }
+}

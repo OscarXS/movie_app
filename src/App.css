@@ -4,7 +4,7 @@
     margin-inline: auto;
 
     display: grid;
-    grid-template-columns: 150px 1fr 0.5fr;
+    grid-template-columns: 1fr 50px;
     grid-template-rows: 50px;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,11 @@
 
 .header .logo {
     font-weight: bold;
+    flex: 1;
 }
 
 .header .menu {
+    flex: 1;
     padding: 0;
     margin: 0;
     list-style: none;
