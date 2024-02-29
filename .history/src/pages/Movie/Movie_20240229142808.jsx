@@ -31,8 +31,8 @@ const Movie = () => {
           </div>
 
           <div className="flex justify-center items-center sm:px-16 px-8 py-4 w-full z-10 mt-40">
-            <div className="max-sm:flex-col-reverse max-sm:mt-40 xl:max-w-[1280px] w-full flex flex-row gap-20 items-center">
-              <img className='flex-[1] object-cover object-top w-[250px]' src={`https://image.tmdb.org/t/p/original/${singleMovie?.poster_path}`} alt="image" />
+            <div className="xl:max-w-[1280px] w-full flex flex-row gap-20 items">
+              <img className='flex-[1] object-cover object-top w-10' src={`https://image.tmdb.org/t/p/original/${singleMovie?.poster_path}`} alt="image" />
               <div className="flex flex-col flex-[3]">
                 <h2 className='text-white text-5xl font-bold'>{singleMovie?.title}</h2>
                 <p className='text-base text-white mt-8'>{singleMovie?.overview}</p>
