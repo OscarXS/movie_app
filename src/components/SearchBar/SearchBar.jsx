@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styles from './SearchBar.module.css'
 import SingleMovie from '../SingleMovie/SingleMovie'
 
-// const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/search/movie?query=${title}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`.replace(' ', '+'))
-//     const data = await response.json();
 
 const SearchBar = () => {
   const [movies, setMovies] = useState([]);
