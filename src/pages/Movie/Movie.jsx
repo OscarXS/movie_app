@@ -20,9 +20,9 @@ const Movie = () => {
   return (
     <>
         <Navbar />
-        <div className="bg-primary | flex justify-center items-start sm:px-16 px-6 pb-14">
+        <div className="slider | bg-primary w-full h-screen mt-[-100px] relative">
           <div className="xl:max-w-[1280px] w-full">
-            <div className="heobanner">
+            <div className="herobanner | absolute left-0 top-0">
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt="image" />
             </div>
           </div>
