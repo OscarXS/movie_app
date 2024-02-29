@@ -21,7 +21,6 @@ const TopMovies = () => {
     const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/top_rated?language=en-US&page=1&vote_count.gte=40000&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
     const data = await response.json();
     setTopMovies(data.results)
-    console.log("Top Movies: ", data.results);
   }
 
   useEffect(() => {

@@ -12,7 +12,7 @@ const Navbar = () => {
               <div className="logo | text-orange-500 font-semibold text-2xl"><Link to="/">Movies</Link></div>
               
               <ul className="menu">
-                  <li className='p-5 rounded-2xl text-white bg-black w-7 h-7 flex justify-center items-center'><Link to="/"><FaHome /></Link></li>
+                  <li className='p-5 rounded-2xl text-white bg-black w-7 h-7 flex justify-center items-center hover:bg-orange cursor-pointer'><Link to="/"><FaHome /></Link></li>
               </ul>
             </div>
           </div>

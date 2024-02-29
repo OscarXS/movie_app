@@ -13,7 +13,6 @@ const Hero = () => {
         const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/now_playing?language=en-US&page=1&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
         const data = await response.json();
         setNewMovies(data.results)
-        console.log("New Movies: ", data.results);
     }
 
     useEffect(() => {
@@ -30,7 +29,7 @@ const Hero = () => {
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Trending</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[6]?.title}</h2>
-                <p className='text-white text-base mb-4'>{newMovies[6]?.overview}</p>
+                <p className='text-white text-base mb-4'>{newMovies[6]?.overview} <span className='underline py-5 block pt-2 hover:text-orange-300'>Read More</span></p>
             </div>
         </div>
         </Link>
@@ -40,8 +39,8 @@ const Hero = () => {
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[14]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Trending</p>
-                <h2 className='text-white font-bold text-base lg:text-lg mb-6 leading-normal'>{newMovies[14]?.title}</h2>
-                <p className='text-white text-base mb-4'>{newMovies[14]?.overview}</p>
+                <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[14]?.title}</h2>
+                <p className='text-white text-base mb-4'>{newMovies[14]?.overview} <span className='underline py-5 block pt-2 hover:text-orange-300'>Read More</span></p>
             </div>
         </div>
         </Link>
@@ -52,7 +51,7 @@ const Hero = () => {
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Trending</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[2]?.title}</h2>
-                <p className='text-white text-base mb-4'>{newMovies[2]?.overview}</p>
+                <p className='text-white text-base mb-4'>{newMovies[2]?.overview} <span className='underline py-5 block pt-2 hover:text-orange-300'>Read More</span></p>
             </div>
         </div>
         </Link>
@@ -63,7 +62,7 @@ const Hero = () => {
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Trending</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[3]?.title}</h2>
-                <p className='text-white text-base mb-4'>{newMovies[3]?.overview}</p>
+                <p className='text-white text-base mb-4'>{newMovies[3]?.overview} <span className='underline py-5 block pt-2 hover:text-orange-300'>Read More</span></p>
             </div>
         </div>
         </Link>
@@ -74,7 +73,7 @@ const Hero = () => {
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Trending</p>
                 <h2 className='text-white font-bold text-lg mb-6 leading-normal'>{newMovies[4]?.title}</h2>
-                <p className='text-white text-base mb-4'>{newMovies[4]?.overview}</p>
+                <p className='text-white text-base mb-4'>{newMovies[4]?.overview} <span className='underline py-5 block pt-2 hover:text-orange-300'>Read More</span></p>
             </div>
         </div>
         </Link>

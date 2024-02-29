@@ -14,7 +14,6 @@ const SearchBar = () => {
 
     const data = await response.json();
     setMovies(data.results);
-    console.log(data.results);
   }
 
   useEffect(() => {
