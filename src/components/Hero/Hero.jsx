@@ -40,7 +40,7 @@ const Hero = () => {
             <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${newMovies[14]?.backdrop_path}`} alt="image" />
             <div className="content | absolute left-[20%] top-[20%] w-[500px] max-w-[80%] z-[14]">
                 <p className='text-white mb-4'>Top Movies</p>
-                <h2 className='text-white font-bold text-base lg:text-lg mb-6 leading-tight'>{newMovies[14]?.title}</h2>
+                <h2 className='text-white font-bold text-base lg:text-lg mb-6 leading-normal'>{newMovies[14]?.title}</h2>
                 <p className='text-white text-base mb-4'>{newMovies[14]?.overview}</p>
             </div>
         </div>
