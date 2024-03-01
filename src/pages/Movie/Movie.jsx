@@ -22,7 +22,7 @@ const Movie = () => {
   },[])
   
   return (
-    <div className='h-dvh bg-primary '>
+    <div className='h-dvh bg-primary h-full'>
       <Navbar />
       <div className="w-full overflow-hidden">
         <div className="flex flex-col justify-center items-center sm:px-16 px-8 py-4 relative">
