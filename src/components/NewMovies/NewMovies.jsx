@@ -18,9 +18,13 @@ const NewMovies = () => {
   const [newMovies, setNewMovies] = useState([]);
 
   const getNewMovies = async () => {
-    const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/now_playing?language=en-US&page=1&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
-    const data = await response.json();
-    setNewMovies(data.results)
+    try {
+      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/now_playing?language=en-US&page=1&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
+      const data = await response.json();
+      setNewMovies(data.results)
+    } catch (error) {
+      console.log(erroe);
+    }
   }
 
   useEffect(() => {

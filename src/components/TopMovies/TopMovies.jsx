@@ -18,9 +18,13 @@ const TopMovies = () => {
   const [topMovies, setTopMovies] = useState([]);
 
   const getTopMovies = async () => {
-    const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/top_rated?language=en-US&page=1&vote_count.gte=40000&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
-    const data = await response.json();
-    setTopMovies(data.results)
+    try {
+      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/movie/top_rated?language=en-US&page=1&vote_count.gte=40000&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
+      const data = await response.json();
+      setTopMovies(data.results)
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {

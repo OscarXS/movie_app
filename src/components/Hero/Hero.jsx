@@ -93,35 +93,25 @@ const Hero = () => {
     </div>
     {/* Thumbnail */}
     <div className="thumbnail bottom-0 flex justify-center gap-3 w-full h-[250px] z-10 overflow-auto box-border">
-        <Link to={`/movie/${newMovies[6]?.id}`}>
         <div className="item active">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[6]?.poster_path}`} alt="thumbnail" />
         </div>
-        </Link>
 
-        <Link to={`/movie/${newMovies[14]?.id}`}>
         <div className="item">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[14]?.poster_path}`} alt="thumbnail" />
         </div>
-        </Link>
 
-        <Link to={`/movie/${newMovies[2]?.id}`}>
         <div className="item">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[2]?.poster_path}`} alt="thumbnail" />
         </div>
-        </Link>
 
-        <Link to={`/movie/${newMovies[3]?.id}`}>
         <div className="item">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[3]?.poster_path}`} alt="thumbnail" />
         </div>
-        </Link>
 
-        <Link to={`/movie/${newMovies[4]?.id}`}>
         <div className="item">
             <img src={`https://image.tmdb.org/t/p/original/${newMovies[4]?.poster_path}`} alt="thumbnail" />
         </div>
-        </Link>
       </div>
     </div>
   )

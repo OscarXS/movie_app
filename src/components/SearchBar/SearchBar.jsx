@@ -8,10 +8,14 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/search/movie?query=${title}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`.replace(' ', '+'));
+    try {
+      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/search/movie?query=${title}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`.replace(' ', '+'));
 
-    const data = await response.json();
-    setMovies(data.results);
+      const data = await response.json();
+      setMovies(data.results);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
@@ -29,6 +33,12 @@ const SearchBar = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className='w-[90%]'
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    console.log("Pressed")
+                    searchMovies(searchTerm)
+                  } 
+                }}
               />
               <div 
                 className={styles.button} 
@@ -40,15 +50,15 @@ const SearchBar = () => {
           </div>
 
           {
-            searchTerm === "" ? (
+            searchTerm === "" && searchTerm.length < 3 ? (
               <div className="empty p-10">
                   <h2 className='text-lg text-gray-300'></h2>
                 </div>
             ) : (
               movies?.length > 0 ? (
                 <div className="container">
-                  {movies.map((movie, _) => (
-                    <SingleMovie movie={movie} key={movie.index}/>
+                  {movies.map((movie) => (
+                    <SingleMovie movie={movie} key={movie.id}/>
                   ))}
                 </div>
               ) : (
