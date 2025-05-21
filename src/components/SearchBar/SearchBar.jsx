@@ -9,7 +9,7 @@ const SearchBar = () => {
 
   const searchMovies = async (title) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/search/movie?query=${title}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`.replace(' ', '+'));
+      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}search/movie?query=${title}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`.replace(' ', '+'));
 
       const data = await response.json();
       setMovies(data.results);

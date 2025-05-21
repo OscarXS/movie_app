@@ -18,7 +18,7 @@ const UpcomingMovies = () => {
 
   const getUpcomingMovies = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&release_date.gte=2024-03-31&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
+      const response = await fetch(`${import.meta.env.VITE_TMDB_URL}discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&release_date.gte=2024-03-31&api_key=${import.meta.env.VITE_TMDB_API_KEY}`)  
       const data = await response.json();
       setUpcomingMovies(data.results)
     } catch (error) {
